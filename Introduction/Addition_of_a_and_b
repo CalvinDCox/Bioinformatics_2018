@@ -1,0 +1,19 @@
+#Example: A+B
+#01/20/2018
+#Calvin D. Cox
+ 
+#open file and store it in a variable
+with open('exampletext.txt') as file:
+    quant = file.readline()
+    numbers = file.readlines()
+    
+    
+#This stores the entire set of fasta files as a list
+result = []
+for i in numbers:
+    container = i.split()
+    total = int(container[0]) + int(container[1])
+    result.append(total)
+
+for i in result:
+    print(i)
